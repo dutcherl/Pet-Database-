@@ -51,6 +51,7 @@ public class PetDatabase {
 				 input = in.nextLine();
 				input.trim();
 				petDb.searchForByName(input);
+				System.out.println();
 				break;
 				
 				
