@@ -31,13 +31,12 @@ public class Pet {
 	}
 	
 	
-	
 	@Override
 	public String toString() {
 		
-		System.out.print(name);
+		System.out.print(name + " " + age);
 		
-		return "";
+		return name + " " + age;
 		
 		
 	}
