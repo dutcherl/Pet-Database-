@@ -1,15 +1,15 @@
 import java.util.ArrayList;
-
+// Database class manages storing, retrieving, updating, and remove elements
 public class Database<T extends Pet> {
 
 	private ArrayList<T> dbList = new ArrayList<T>();
-
+	// Adds an item to the database list
 	public void addItem(T item) {
 
 		dbList.add(item);
 
 	}
-
+	// Prints out the contents of the database
 	public void printDb() {
 
 		String lineSeparator = "+-----------------------------+";
@@ -24,7 +24,7 @@ public class Database<T extends Pet> {
 		}
 		System.out.println(lineSeparator);
 	}
-
+	 //Pritns out the content of the database list provided
 	public void printDb(ArrayList<T> list) {
 
 		String lineSeparator = "+-----------------------------+";
@@ -39,7 +39,7 @@ public class Database<T extends Pet> {
 		}
 		System.out.println(lineSeparator);
 	}
-
+	//Searches for elements in database by name
 	public void searchForByName(String search) {
 
 		ArrayList<T> found = new ArrayList<T>();
@@ -57,7 +57,7 @@ public class Database<T extends Pet> {
 			
 		printDb(found);
 	}
-	
+	//Searches for elements in database by age
 	public void searchForByAge(String search) {
 
 		ArrayList<T> found = new ArrayList<T>();
@@ -77,6 +77,7 @@ public class Database<T extends Pet> {
 	}
 	
 	@SuppressWarnings("unchecked")
+	// Updates an element of the database with new credenitals provided by the user
 	public void update(String targetId, String updateCredentials){
 	
 		String[] tokens = updateCredentials.split(" ");
@@ -92,7 +93,7 @@ public class Database<T extends Pet> {
 		
 	}
 
-
+	//removes the target element from the database
 	public void remove(String targetId) {
 		T elem = dbList.get(Integer.parseInt(targetId));		
 		dbList.remove(Integer.parseInt(targetId));

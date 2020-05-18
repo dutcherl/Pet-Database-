@@ -7,6 +7,7 @@ public class PetDatabase {
 
 	public static void main(String[] args) {
 
+		//Default Pets loaded at startup
 		petDb.addItem(new Pet("Boomer", 15));
 		petDb.addItem(new Pet("Chompy", 12));
 		petDb.addItem(new Pet("Milkshake", 4));
@@ -18,11 +19,13 @@ public class PetDatabase {
 		
 
 		int userInput = menu();
-
+		
+		//main menu loop
 		while (userInput != 7) {
 			System.out.println("Your choice: " + userInput + "\n");
 			String input = "";
 			String targetId = "";
+			// menu items controlled via switch statement
 			switch (userInput) {
 
 			case 1:
@@ -88,15 +91,16 @@ public class PetDatabase {
 			}
 			userInput = menu();
 		}
+		System.out.println("System is now exiting");
 	}
 
-
+	//repeatable add pet dialogue 
 	private static String addPetDialogue() {
 		System.out.println("add pet (name, age): ");
 		return in.nextLine();
 
 	}
-
+	// Main menu for the program 
 	public static int menu() {
 
 		System.out.println("What would you like to do?");

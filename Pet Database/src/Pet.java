@@ -1,19 +1,20 @@
-
+// Pet class for encapsulating data to be stored in a Pet Database
 public class Pet {
 
 	
-	
+	// Class fields
 	private String name;
 	private int age;
 	
 	public Pet(String name, int age) {
 		
-		
+		//Sets the class level fields to the values of the input arguments
 		setName(name);
 		setAge(age);
 		
 	}
 
+	//Accessor and Mutator methods
 	public String getName() {
 		return name;
 	}
@@ -30,7 +31,7 @@ public class Pet {
 		this.age = age;
 	}
 	
-	
+	// toString override 
 	@Override
 	public String toString() {
 		
