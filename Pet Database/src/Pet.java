@@ -32,5 +32,13 @@ public class Pet {
 	
 	
 	
-	
+	@Override
+	public String toString() {
+		
+		System.out.print(name);
+		
+		return "";
+		
+		
+	}
 }
