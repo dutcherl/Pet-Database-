@@ -22,6 +22,7 @@ public class PetDatabase {
 		while (userInput != 7) {
 			System.out.println("Your choice: " + userInput + "\n");
 			String input = "";
+			String targetId = "";
 			switch (userInput) {
 
 			case 1:
@@ -43,9 +44,29 @@ public class PetDatabase {
 					count += 1;
 
 				}
-
+				
 				System.out.println(count + " pets added.");
 				break;
+		
+			case 3:
+				
+				System.out.println("Enter the pet ID you want to update: ");
+				targetId = in.nextLine();
+				System.out.println("Enter the new name and new age: ");
+				String updatedCredentials = in.nextLine();
+				petDb.update(targetId, updatedCredentials);
+				break;
+				
+			case 4:
+				
+				System.out.println("Enter the pet ID you want to remove: ");
+				targetId = in.nextLine();
+				
+				petDb.remove(targetId);
+				break;
+				
+
+				
 			case 5:
 				System.out.println("Enter a name to search:");
 				 input = in.nextLine();

@@ -75,5 +75,28 @@ public class Database<T extends Pet> {
 		
 		printDb(found);
 	}
+	
+	@SuppressWarnings("unchecked")
+	public void update(String targetId, String updateCredentials){
+	
+		String[] tokens = updateCredentials.split(" ");
+		String name = tokens[0];
+		int age = Integer.parseInt(tokens[1]);
+		T elem = dbList.get(Integer.parseInt(targetId));
+		
+		
+		dbList.set(Integer.parseInt(targetId), (T) new Pet(name, age));
+		
+		System.out.println(elem.getName() + " " + elem.getAge() + " changed to " + updateCredentials);
+		
+		
+	}
+
+
+	public void remove(String targetId) {
+		T elem = dbList.get(Integer.parseInt(targetId));		
+		dbList.remove(Integer.parseInt(targetId));
+		System.out.println(elem.getName() + " " + elem.getAge() + " was removed");
+	}
 
 }
