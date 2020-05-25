@@ -1,11 +1,5 @@
+public class Pet extends Item{
 // Pet class for encapsulating data to be stored in a Pet Database
-public class Pet {
-
-	
-	// Class fields
-	private String name;
-	private int age;
-	
 	public Pet(String name, int age) {
 		
 		//Sets the class level fields to the values of the input arguments
@@ -14,21 +8,21 @@ public class Pet {
 		
 	}
 
-	//Accessor and Mutator methods
+	//getter and setter methods
 	public String getName() {
-		return name;
+		return super.name;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		super.name = name;
 	}
 
 	public int getAge() {
-		return age;
+		return super.age;
 	}
 
 	public void setAge(int age) {
-		this.age = age;
+		super.age = age;
 	}
 	
 	// toString override 
