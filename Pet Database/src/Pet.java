@@ -1,10 +1,9 @@
 
-public class Pet {
+public class Pet extends Item{
 
 	
 	
-	private String name;
-	private int age;
+
 	
 	public Pet(String name, int age) {
 		
@@ -15,19 +14,19 @@ public class Pet {
 	}
 
 	public String getName() {
-		return name;
+		return super.name;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		super.name = name;
 	}
 
 	public int getAge() {
-		return age;
+		return super.age;
 	}
 
 	public void setAge(int age) {
-		this.age = age;
+		super.age = age;
 	}
 	
 	

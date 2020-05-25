@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
-public class Database<T extends Pet> {
+import javax.tools.JavaCompiler;
+
+public class Database<T extends Item> implements java.io.Serializable {
 	
 	private ArrayList<T> dbList = new ArrayList<T>(); 
 	
@@ -25,6 +27,7 @@ public class Database<T extends Pet> {
 		
 		for(T e : dbList) {
 			System.out.printf("| %-3s | %-15s | %-3s | %n", dbList.indexOf(e), e.getName(), e.getAge());
+		
 			
 		}
 		System.out.println(lineSeparator);
